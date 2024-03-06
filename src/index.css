@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.tags-shadow {
+  box-shadow:  19px 19px 46px #26b7b5,
+             -19px -19px 46px #3affff;
+}
+
+.tag-gradient-cyan {
+    background: radial-gradient(ellipse, rgb(154, 240, 253) 0%, rgb(7, 202, 232) 100%);
+}
+
+.tag-gradient-pink {
+    background: radial-gradient(ellipse, rgb(249, 152, 200) 0%, rgb(236, 72, 153) 100%);
+}
+
+.tag-gradient-purple {
+    background: radial-gradient(ellipse, rgb(228, 135, 252) 0%, rgb(174, 60, 245) 100%);
+}
+
+
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(-50px);
+    transform-origin: 50px 50%;
+  }
+  50% {
+    transform: rotate(360deg) translateX(-50px);
+    transform-origin: 50px 50%;
+  }
+}
+
+.circle-gradient {
+    background: radial-gradient(circle, rgba(245,216,252,1) 0%, rgba(148,187,233,1) 100%);
+    /* animation: orbit 5s linear forwards; */
+}
+
+.big-circle-gradient {
+    background: radial-gradient(circle, rgb(243, 219, 249) 0%, rgba(201,148,233,1) 100%);
+}
+
+.circle-shadow {
+    -webkit-box-shadow: 10px -9px 25px -11px rgba(89,30,107,1);
+    -moz-box-shadow: 10px -9px 25px -11px rgba(89,30,107,1);
+    box-shadow: 10px -9px 25px -11px rgba(89,30,107,1);
+}
+
+/*================ABOUT TITLE ANIMATION================*/
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating-icon {
+  animation: rotateIcon 3s linear infinite;
+}
+
+
+.motion-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slideLeft 20s linear infinite;
+}
+
+/*  Hover for gradient buttons*/
+.btn-filled:hover {
+  background-color: #0084FF !important; /* Azure color */
+  background-image: none !important;
+}
+
+@layer base {
+    body {
+        @apply w-full h-full box-border overflow-x-hidden;
+    }
+
+    h1 {
+        @apply font-grotesk font-bold tracking-tighter
+    }
+}
+
+@layer utilities {
+  .bg-custom-combined-gradient {
+    background-image: 
+      linear-gradient(200deg, rgba(233, 220, 207, 0.8), transparent),
+      linear-gradient(300deg, rgba(225, 157, 245, 0.8), transparent),
+      linear-gradient(200deg, rgba(249, 222, 177, 0.8), transparent);
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .nav-link {
+        @apply relative tracking-[1px] 
+    }
+
+    .nav-link::after {
+        @apply content-[''] bg-[#9935d8] h-[5px] w-[0%] top-8 rounded-xl absolute duration-500
+    }
+
+    .nav-link:hover::after {
+        @apply w-[100%] 
+    }
+
+    .nav-link-footer {
+        @apply relative tracking-[1px] 
+    }
+
+    .nav-link-footer::after {
+        @apply content-[''] bg-[#4d4b4f] h-[8px] w-[0%] rounded-xl absolute left-0 -bottom-7 duration-500
+    }
+
+    .nav-link-footer:hover::after {
+        @apply w-[80%] 
+    }
+
+
+}
+
+
+
+
+
+/*
+pink: rgb(252, 194, 204)
+tiffany blue: rgb(192, 250, 248)
+green: rgb(220, 252, 229)
+yellow: rgb(252, 240, 220)
+*/
+

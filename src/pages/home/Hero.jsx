@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MotionText from '../../components/ui/MotionText';
 import { ArrowForward } from '@mui/icons-material';
 import { FaAsterisk } from "react-icons/fa";
 
 
 const Hero = () => {
+
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <section className='bg-custom-combined-gradient w-full h-full flex flex-col justify-center pt-48 pb-20 relative'>
             <div className="absolute inset-0">
@@ -38,14 +41,18 @@ const Hero = () => {
                     </p>
                     
                     
-
                     {/* Container for the button to be right-aligned */}
                     <div className="w-10/12 flex justify-end mt-6">
-                        <button className="group relative inline-flex  items-center justify-center 
-                            overflow-hidden rounded-md bg-transparent font-semibold text-zinc-600 text-2xl
-                            hover:text-zinc-500 nav-link uppercase">
-                            <span>Contact Me</span>
-                            <div className="ml-4 transition duration-300 group-hover:rotate-[360deg] ">
+                        <button 
+                          onMouseEnter={() => setIsHovered(true)}
+                          onMouseLeave={() => setIsHovered(false)}
+                            className="group relative inline-flex items-center justify-center overflow-hidden 
+                          rounded-md bg-transparent font-semibold text-zinc-600 text-2xl nav-link uppercase"
+                        >
+                            <span>
+                                {isHovered ? "let's talk" : 'contact me'}
+                            </span>
+                            <div className="ml-4 transition duration-300 group-hover:rotate-[360deg]">
                                 <ArrowForward style={{color: '#9935d8', fontSize: '2rem'}}/>
                             </div>
                         </button>

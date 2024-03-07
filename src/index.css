@@ -121,16 +121,17 @@
     }
 
     .nav-link-footer {
-        @apply relative tracking-[1px] 
-    }
+    @apply relative tracking-[1px];
+}
 
-    .nav-link-footer::after {
-        @apply content-[''] bg-[#4d4b4f] h-[8px] w-[0%] rounded-xl absolute left-0 -bottom-7 duration-500
-    }
+  .nav-link-footer::after {
+      @apply content-[''] bg-[#4d4b4f] h-[8px] w-[0%] rounded-xl absolute left-1/2 -bottom-7 duration-500;
+      transform: translateX(-50%);
+  }
 
-    .nav-link-footer:hover::after {
-        @apply w-[80%] 
-    }
+  .nav-link-footer:hover::after {
+      @apply w-[80%];
+  }
 
 
 }

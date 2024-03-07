@@ -9,7 +9,7 @@ const Hero = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <section className='bg-custom-combined-gradient w-full h-full flex flex-col justify-center pt-48 pb-20 relative'>
+        <section className='sticky bg-custom-combined-gradient w-full h-full flex flex-col justify-center pt-48 pb-20'>
             <div className="absolute inset-0">
                 <div className="container mx-auto px-4 h-full">
                     {/* Grid */}
@@ -27,7 +27,9 @@ const Hero = () => {
                     opacity-75 bg-gradient-to-r from-purple-300 to-pink-300 -z-20">
                 </div>
 
-                <h1 className='text-[12rem] text-zinc-700 uppercase z-10 leading-[10.5rem] tracking-[.2rem]'>
+                <h1 className='text-[12rem] text-zinc-700 uppercase z-10 leading-[10.5rem] tracking-[.2rem]'
+                    data-aos='zoom-out-down'  
+                >
                     hi there, i'm <br/>
                     <span className='mt-[-4rem]'>
                         trish ramos
@@ -40,24 +42,27 @@ const Hero = () => {
                         Web Developer & Motion Designer
                     </p>
                     
-                    
-                    {/* Container for the button to be right-aligned */}
                     <div className="w-10/12 flex justify-end mt-6">
-                        <button 
-                          onMouseEnter={() => setIsHovered(true)}
-                          onMouseLeave={() => setIsHovered(false)}
-                            className="group relative inline-flex items-center justify-center overflow-hidden 
-                          rounded-md bg-transparent font-semibold text-zinc-600 text-2xl nav-link uppercase"
+                        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden 
+                            rounded-md bg-transparent border-2 border-zinc-500 px-12 font-medium
+                            text-zinc-600 text-xl uppercase duration-500"
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                            style={{ minWidth: '250px' }}  // Set a fixed minimum width or adjust as needed
                         >
-                            <span>
-                                {isHovered ? "let's talk" : 'contact me'}
-                            </span>
-                            <div className="ml-4 transition duration-300 group-hover:rotate-[360deg]">
-                                <ArrowForward style={{color: '#9935d8', fontSize: '2rem'}}/>
+
+                            <div className="flex justify-between items-center w-full pl-3">
+                                <span className="z-10">{isHovered ? "let's talk" : 'contact me'}</span>
+                                
+                                <div className="flex absolute right-0 transition-all ease-in-out duration-500" 
+                                    style={{ width: '50px', transition: 'opacity 0.5s', opacity: isHovered ? 1 : 0 }}>
+                                    <ArrowForward style={{color: '#9935d8', fontSize: '2rem'}}/>
+                                </div>
                             </div>
                         </button>
-                    </div>
+                    </div>                
                 </div>
+
                 <div className="mt-32">
                     <MotionText
                         icon={<FaAsterisk style={{color: '#9935d8'}}/>}

@@ -5,10 +5,48 @@
 @tailwind utilities;
 
 
+/* ============ EFECTO CURTAIN =============*/
+/* Example CSS */
+/* Example CSS */
+.hero-section {
+  position: relative;
+  z-index: 1; /* Lower than About section */
+}
+
+.about-section {
+  position: relative;
+  z-index: 2; /* Higher than Hero section */
+  margin-top: -100px;
+}
+
+
+.backdrop {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  left: 0;
+  animation-name: animate-backdrop;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes animate-backdrop {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
 .tags-shadow {
   box-shadow:  19px 19px 46px #26b7b5,
              -19px -19px 46px #3affff;
 }
+
+/* ============= GRADIENTS =============*/
 
 .tag-gradient-cyan {
     background: radial-gradient(ellipse, rgb(154, 240, 253) 0%, rgb(7, 202, 232) 100%);
@@ -88,8 +126,8 @@
 }
 
 @layer base {
-    body {
-        @apply w-full h-full box-border overflow-x-hidden;
+    html, body {
+        @apply w-full h-full box-border overflow-x-hidden m-0 p-0;
     }
 
     h1 {
@@ -125,7 +163,7 @@
 }
 
   .nav-link-footer::after {
-      @apply content-[''] bg-[#4d4b4f] h-[8px] w-[0%] rounded-xl absolute left-1/2 -bottom-7 duration-500;
+      @apply content-[''] bg-[#747276] h-[8px] w-[0%] rounded-xl absolute left-1/2 -bottom-7 duration-500;
       transform: translateX(-50%);
   }
 

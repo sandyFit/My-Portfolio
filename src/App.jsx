@@ -3,6 +3,7 @@ import Navbar from './layouts/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from './layouts/Footer';
 import Aos from 'aos';
+import 'aos/dist/aos.css'; // Import the CSS styles
 
 const App = () => {
 
@@ -13,7 +14,7 @@ const App = () => {
     }, []);
 
     return (
-        <section>
+        <section className='relative'>
             <Navbar />
             <Outlet />
             <Footer/>

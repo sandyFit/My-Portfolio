@@ -1,11 +1,18 @@
 import React from 'react';
 import Hero from './Hero';
+import About from './About';
 
 const Home = () => {
     return (
-        <section>
-            <Hero/>
-        </section>
+        <div className='relative'>           
+            <section id='hero'>
+                <Hero/>
+            </section>
+
+            <section id='about'>
+                <About/>
+            </section>
+        </div>
     )
 }
 

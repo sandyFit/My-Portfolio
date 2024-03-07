@@ -1,6 +1,6 @@
 import { CopyrightRounded, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { FaAsterisk } from 'react-icons/fa';
 
 const Footer = () => {
 
@@ -24,7 +24,7 @@ const Footer = () => {
             {/* Content */}
 
             <div className="container mx-auto px-4 z-10 text-center justify-center relative">
-                <div className="absolute bottom-0 right-[26rem]  w-[45rem] h-[45rem] rounded-full filter blur-xl 
+                <div className="absolute bottom-16 right-[26rem]  w-[45rem] h-[45rem] rounded-full filter blur-xl 
                     opacity-75 bg-gradient-to-r from-purple-300 to-pink-300 -z-20">
                 </div>
 
@@ -34,7 +34,8 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <h1 className='text-[15rem] text-zinc-700 uppercase z-10 leading-[10.5rem] tracking-[.2rem] nav-link-footer cursor-pointer'>
+                <h1 className='text-[15rem] text-zinc-700 uppercase z-10 leading-[10.5rem] tracking-[.2rem] 
+                    nav-link-footer cursor-pointer'>
                     <a href="mailto:sandy07r@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
                         Let's talk
                     </a>
@@ -46,11 +47,23 @@ const Footer = () => {
 
                 <hr className='w-full border-2 border-zinc-400 border-opacity-60 mt-[12rem]'/>
 
-                <div className="flex justify-between items-center mt-6">
-                    <div className="flex justify-evenly gap-10">
-                        <Instagram style={{fontSize: '3rem', color: '#3f3f46'}}/>
-                        <LinkedIn style={{fontSize: '3rem', color: '#3f3f46'}}/>
-                        <GitHub style={{fontSize: '3rem', color: '#3f3f46'}}/>
+                <div className="flex justify-between items-center mt-6" >
+                    <div className='flex justify-end text-zinc-700 my-6 mr-16 gap-12'>
+                        <Instagram 
+                            style={{ fontSize: '3rem',  cursor: 'pointer', transition: 'opacity 0.3s' }}
+                            onMouseOver={(e) => e.target.style.opacity = 0.75}
+                            onMouseOut={(e) => e.target.style.opacity = 2} 
+                        />
+                        <LinkedIn 
+                            style={{ fontSize: '3rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                            onMouseOver={(e) => e.target.style.opacity = 0.75}
+                            onMouseOut={(e) => e.target.style.opacity = 1}
+                        />
+                        <GitHub 
+                            style={{ fontSize: '3rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                            onMouseOver={(e) => e.target.style.opacity = 0.75}
+                            onMouseOut={(e) => e.target.style.opacity = 1}
+                        /> 
                     </div>
 
                     <div className="flex text-3xl text-zinc-600 font-semibold">
@@ -60,12 +73,12 @@ const Footer = () => {
 
                     <div className="flex flex-col">
                         <div className="flex">
-                            
-                            <h4 className='text-zinc-700 text-5xl uppercase font-bold'>
+                            <FaAsterisk style={{ fontSize: '3rem', color: '#9935d8' }} className='rotating-icon'/>
+                            <h4 className='text-zinc-700 text-5xl uppercase font-bold ml-3'>
                                 Trish Ramos
                             </h4>
                         </div>
-                        <p className='text-xl text-zinc-500'>Web Developer & Motion Designer</p>
+                        <p className='text-xl text-zinc-500 ml-16'>Web Developer & Motion Designer</p>
                     </div>
                 </div>
                 

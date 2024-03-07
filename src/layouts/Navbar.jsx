@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className='absolute top-0 left-0 flex justify-between items-center w-full py-16 px-[4%] z-50'>
+        <nav className='absolute top-0 left-0 flex justify-between items-center w-full py-16 px-[4%] z-10'>
             <div className="flex relative">
                 <div className="big-circle-gradient w-32 h-32 rounded-full filter blur-[1px]"></div>
                 <div className="circle-gradient w-[6rem] h-[6rem] rounded-full absolute top-12 circle-shadow filter 

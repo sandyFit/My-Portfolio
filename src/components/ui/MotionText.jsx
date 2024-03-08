@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const MotionText = ({ icon, text}) => {
-  const repetitions = Array(6).fill(null);
+  const repetitions = Array(4).fill(null);
 
   return (
     <div className="text-slider-container font-syne text-2xl z-10" style={{ overflow: 'hidden' }}>

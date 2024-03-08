@@ -8,7 +8,7 @@ const Footer = () => {
     
 
     return (
-        <section className='bg-custom-combined-gradient w-full h-full flex flex-col  pt-48 pb-20 relative'>
+        <section className='w-full h-full flex flex-col  pt-48 pb-20 relative'>
             <div className="absolute inset-0">
                 <div className="container mx-auto px-4 h-full">
                     {/* Grid */}

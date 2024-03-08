@@ -1,42 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const About = () => {
-    // const [scrolled, setScrolled] = useState(false);
-    // const [aboutOverlaysHero, setAboutOverlaysHero] = useState(false);
-    // const [footerReveals, setFooterReveals] = useState(false);
-    // const [dynamicTop, setDynamicTop] = useState(0);
-
-    // useEffect(() => {
-    //     // Only calculate and set dynamic top margin when the component mounts
-    //     const heroHeight = document.querySelector('.hero-section')?.offsetHeight || 0;
-    //     setDynamicTop(-heroHeight);
-
-    //     const handleScroll = () => {
-            
-    //         const aboutHeight = document.querySelector('.about-section')?.offsetHeight || 0;
-    //         const isScrolledToAbout = window.scrollY > heroHeight && window.scrollY < heroHeight + aboutHeight;
-    //         const isScrolledPastAbout = window.scrollY >= heroHeight + aboutHeight;
-
-    //         setScrolled(window.scrollY > 10);
-    //         setAboutOverlaysHero(isScrolledToAbout);
-    //         setFooterReveals(isScrolledPastAbout);
-    //     };
-
-    //     // Attach scroll listener
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     // Clean up
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []); // Empty array means this effect runs only once, akin to componentDidMount
-
+    
 
     return ( 
-        // <section className={`top-0 w-full bg-[#1f0336] px-48 py-24 rounded-[6rem] ${scrolled ? 'backdrop' : ''}`}        
-        //     style={{ marginTop: `${dynamicTop}px` }}
-        // >
-        <section className='w-full bg-[#1f0336] px-48 py-24 rounded-[6rem] z-30'>
+        
+        <section className='w-full px-48 py-24 rounded-[6rem] bg-[#1f0336] min-h-full z-50'>
             <div className="grid grid-cols-2 gap-20">
                 {/* Who I Am */}
                 <article>

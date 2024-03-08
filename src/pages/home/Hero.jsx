@@ -9,7 +9,7 @@ const Hero = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <section className='sticky bg-custom-combined-gradient w-full h-full flex flex-col justify-center pt-48 pb-20'>
+        <section className='sticky  w-full min-h-full flex flex-col justify-center pt-48 pb-20'>
             <div className="absolute inset-0">
                 <div className="container mx-auto px-4 h-full">
                     {/* Grid */}

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Changa:wght@200..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Gugi&family=Magra:wght@400;700&family=Manuale:ital,wght@0,300..800;1,300..800&family=Metamorphous&family=Nova+Round&family=Prosto+One&family=Redressed&family=Stick+No+Bills:wght@200..800&family=Train+One&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -9,14 +11,18 @@
 
 body {
   background-image: 
-      linear-gradient(300deg, rgba(225, 157, 245, 0.8), transparent),
-      linear-gradient(100deg, rgba(233, 220, 207, 0.8), transparent),
-      linear-gradient(200deg, rgba(249, 222, 177, 0.8), transparent);
+      linear-gradient(300deg, rgba(217, 216, 214, 0.8), transparent),
+      linear-gradient(100deg, rgba(166, 155, 145, 0.6), transparent),
+      linear-gradient(200deg, rgba(205, 201, 194, 0.8), transparent);
     background-size: cover;
     background-position: center;
 }
 
-
+.app-title {
+        background: linear-gradient(135deg, rgb(72, 6, 227) 0%, rgb(155,81,224) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
 
 /* ========================================= */
 .tags-shadow {
@@ -109,7 +115,7 @@ body {
     }
 
     h1 {
-        @apply font-grotesk font-bold tracking-tighter
+        @apply  font-semibold tracking-tighter
     }
 }
 
@@ -120,7 +126,7 @@ body {
     }
 
     .nav-link::after {
-        @apply content-[''] bg-[#9935d8] h-[5px] w-[0%] top-8 rounded-xl absolute duration-500
+        @apply content-[''] bg-[#a855f7] h-[5px] w-[0%] left-0 -bottom-1 rounded-xl absolute duration-500
     }
 
     .nav-link:hover::after {
@@ -132,14 +138,17 @@ body {
 }
 
   .nav-link-footer::after {
-      @apply content-[''] bg-[#747276] h-[8px] w-[0%] rounded-xl absolute left-1/2 -bottom-7 duration-500;
+      @apply content-[''] bg-[#747276] h-[8px] w-[0%] rounded-xl absolute left-1/2 bottom-4 duration-500;
       transform: translateX(-50%);
   }
 
   .nav-link-footer:hover::after {
-      @apply w-[80%];
+      @apply w-[94%];
   }
 
+  .rounded-top {
+    border-radius: 30em 0 0 30 2em;
+  }
 
 }
 

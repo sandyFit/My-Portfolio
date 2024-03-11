@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import MotionText from '../../components/ui/MotionText';
-import { ArrowForward } from '@mui/icons-material';
 import { FaAsterisk } from "react-icons/fa";
 
 
@@ -27,7 +26,7 @@ const Hero = () => {
                     opacity-75 bg-gradient-to-r from-lime-200 to-purple-400 -z-20">
                 </div> */}
 
-                <p className='absolute font-semibold text-[52rem] -bottom-12 right-[42rem] -z-20
+                <p className='absolute font-semibold text-[52rem] -bottom-16 right-[42rem] -z-20
                     text-neutral-400 opacity-30'
                 >
                     &
@@ -35,15 +34,15 @@ const Hero = () => {
 
                 <div className="flex flex-col items-center mt-12">
 
-                    <div className="flex flex-col items-start mb-[-4.5rem] w-full">
-                        <p className='text-[3rem] tracking-[.6rem] leading-tighter font-medium font-syne 
-                            text-neutral-600 ml-16'>
+                    <div className="flex flex-col items-start mb-[-4rem] w-full">
+                        <p className='text-[3.2rem] tracking-[.6rem] leading-tighter font-medium font-syne 
+                            text-neutral-600 ml-28'>
                             Web Developer
                         </p>                                      
                     </div>
-                        <h1 className='font-syne font-light text-neutral-700 uppercase z-10 text-[14rem]
-                            tracking-[-.4rem]'
-                            // data-aos='fade-up'
+                        <h1 className='font-syne  text-neutral-700 uppercase z-10 text-[12rem]
+                            tracking-[-.8rem]'
+                            data-aos='zoom-right'
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine"
                         >
@@ -52,8 +51,8 @@ const Hero = () => {
                     
 
                     
-                    <div className="flex flex-col items-end mt-[-4.5rem] w-full">
-                        <p className='text-[3rem] tracking-[.6rem] leading-tight font-medium font-syne mr-16
+                    <div className="flex flex-col items-end mt-[-4rem] w-full">
+                        <p className='text-[3.2rem] tracking-[.6rem] leading-tight font-medium font-syne mr-24
                             text-neutral-600'>
                             Digital Designer
                         </p>                                      
@@ -61,7 +60,7 @@ const Hero = () => {
                 </div>
                 
 
-                <div className="mt-48">
+                <div className="mt-56">
                     <MotionText
                         icon={<FaAsterisk style={{color: '#9935d8'}}/>}
                         text={'Transforming Ideas into Interactive Experiences'}

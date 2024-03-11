@@ -1,8 +1,15 @@
-import { FaAsterisk } from "react-icons/fa";
-import React from 'react'
+import { FaAsterisk, FaMoon, FaSun } from "react-icons/fa";
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(!isClicked);
+    }
+
     return (
         <nav className='absolute top-0 left-0 flex justify-between items-center w-full py-16 px-[4%] z-10'>
             {/* <div className="flex relative">
@@ -22,8 +29,8 @@ const Navbar = () => {
                     fontSize: '5rem'}} className="rotating-icon text-lime-300" />
             </div>
 
-            <div className="flex justify-evenly gap-[9.4rem]">
-                {/*<div className="flex justify-around">
+            <div className="flex justify-evenly gap-20">
+                {/*
                     <p className='text-2xl font-semibold text-neutral-500 text-opacity-85 uppercase'>
                         Available for work
                     </p>
@@ -34,14 +41,29 @@ const Navbar = () => {
                     /> 
                 </div>  */}
  
+                <div className="flex justify-evenly gap-20">
+                    <button class="relative h-14 overflow-hidden rounded bg-transparent px-12 py-6 text-neutral-600 
+                        text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
+                        flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
+                        hover:text-neutral-500"
+                    >
+                        <span class="relative tracking-wider">get in touch</span>
+                    </button>
 
-                <button class="relative h-12 overflow-hidden rounded bg-transparent px-12 py-6 text-neutral-600 
-                    text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
-                    flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
-                    hover:text-neutral-500"
-                >
-                    <span class="relative tracking-wider">get in touch</span>
-                </button>
+                    <button class="relative w-14 h-14 overflow-hidden bg-transparent p-2 text-neutral-600 
+                        text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
+                        flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
+                        hover:text-neutral-500"
+                        onClick={handleClick}
+                    >
+                        <span class="relative tracking-wider">
+                            {isClicked ? <FaMoon style={{ fontSize: '2rem' }} /> : <FaSun style={{ fontSize: '2rem' }} />}
+                            
+                            
+                        </span>
+                    </button>
+
+                </div>
 
                 <ul className='flex flex-col items-start'>
                     {['about', 'projects', 'contact', 'resume'].map((item, index) => (

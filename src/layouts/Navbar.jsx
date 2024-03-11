@@ -1,6 +1,7 @@
 import { FaAsterisk, FaMoon, FaSun } from "react-icons/fa";
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Logo from "../components/ui/Logo";
 
 const Navbar = () => {
 
@@ -21,12 +22,20 @@ const Navbar = () => {
             </div> */}
             <div className=" relative">
                 
-                <FaAsterisk style={{
+                {/* <FaAsterisk style={{
                     fontSize: '8rem'
-                }} className="rotating-icon  absolute -top-12 left-6 text-purple-600" />
+                }} className="rotating-icon  absolute -top-12 left-6 text-[#7c5dec]" />
                 
                 <FaAsterisk style={{
-                    fontSize: '5rem'}} className="rotating-icon text-lime-300" />
+                    fontSize: '5rem'}} className="rotating-icon text-lime-300" /> */}
+                
+
+                <Logo text='*TRISH RAMOS*DEVELOPER & DESIGNER'>
+                    <div className="flex justify-center items-center bg-lime-300 w-32 h-32 rounded-full -z-10">
+                        
+                        <p className="text-skyIce text-[7.5rem] font-syne font-bold">T</p>
+                    </div>
+                </Logo>
             </div>
 
             <div className="flex justify-evenly gap-20">
@@ -42,7 +51,7 @@ const Navbar = () => {
                 </div>  */}
  
                 <div className="flex justify-evenly gap-20">
-                    <button class="relative h-14 overflow-hidden rounded bg-transparent px-12 py-6 text-neutral-600 
+                    <button class="relative h-14 overflow-hidden rounded bg-transparent px-8 py-6 text-neutral-600 
                         text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
                         flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
                         hover:text-neutral-500"
@@ -50,7 +59,7 @@ const Navbar = () => {
                         <span class="relative tracking-wider">get in touch</span>
                     </button>
 
-                    <button class="relative w-14 h-14 overflow-hidden bg-transparent p-2 text-neutral-600 
+                    <button class="relative w-14 h-14 overflow-hidden rounded bg-transparent p-2 text-neutral-600 
                         text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
                         flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
                         hover:text-neutral-500"

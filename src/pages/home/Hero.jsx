@@ -62,7 +62,7 @@ const Hero = () => {
 
                 <div className="mt-56">
                     <MotionText
-                        icon={<FaAsterisk style={{color: '#9935d8'}}/>}
+                        icon={<FaAsterisk style={{color: '#7c5dec'}}/>}
                         text={'Transforming Ideas into Interactive Experiences'}
                     />
                 </div>

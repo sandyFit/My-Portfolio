@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        textLight: '#36332d'
+        textLight: '#36332d',
+        skyIce: '#7c5dec'
       },
 
       fontFamily: {

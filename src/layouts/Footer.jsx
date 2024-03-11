@@ -2,6 +2,7 @@ import { CopyrightRounded, GitHub, Instagram, LinkedIn } from '@mui/icons-materi
 import React from 'react'
 import { FaAsterisk } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Logo from '../components/ui/Logo';
 
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
     
 
     return (
-        <section className='w-full min-h-full flex flex-col pt-36 pb-12 relative'>
+        <section className='w-full min-h-full flex flex-col pt-36 pb-4 relative'>
             <div className="absolute inset-0">
                 <div className="container mx-auto px-4 h-full">
                     {/* Grid */}
@@ -79,16 +80,15 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col">
-                        <div className="flex">
-                            <FaAsterisk style={{ fontSize: '2rem', color: '#9935d8' }} className='rotating-icon mt-4'/>
-                            <h4 className='text-neutral-600 font-syne text-[2.6rem] tracking-tight uppercase font-semibold ml-1'>
-                                Trish Ramos
-                            </h4>
-                        </div>
-                        <p className='text-[1.22rem] font-syne text-neutral-500 ml-10 mt-[-1rem]'>
-                            Web Developer & Motion Designer
-                        </p>
+                        <Logo text='*TRISH RAMOS*DEVELOPER & DESIGNER'>
+                            <div className="flex justify-center items-center bg-lime-300 w-32 h-32 rounded-full -z-10">
+                                
+                                <p className="text-skyIce text-[7.5rem] font-syne font-bold">T</p>
+                            </div>
+                        </Logo>
                     </div> 
+                    
+
                 </motion.div>
 
                 

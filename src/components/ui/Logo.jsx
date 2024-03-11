@@ -5,8 +5,8 @@ function Logo({ text, children }) {
   const deg = 360 / lenght;
 
     return (
-        <div className="spinning-text-wrapper">
-        <div className="spinning-text">
+        <div className='relative w-[180px] h-[180px] rounded-full grid place-items-center font-medium z-50'>
+        <div className='spinning-text'>
             <p className="text-skyIce font-bold">
                 {text.split("").map((letra, i) => (
                     <span

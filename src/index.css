@@ -33,18 +33,6 @@ body {
 
 /* ======== Spinning Curved Text ========== */
 
-.spinning-text-wrapper {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 1rem;
-  font-weight: 400;
-  z-index: 100;
-}
-
 .spinning-text {
   position: absolute;
   width: 100%;
@@ -70,7 +58,33 @@ body {
 }
 
 
+/* Base link style */
+/* Base link style */
+.link {
+  display: inline-block;
+  transition: transform 0.5s, color 0.5s;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
 
+/* Hover state */
+.link:hover {
+  transform: rotateY(360deg); /* Rotate around the Y-axis */
+}
+
+/* Ensure the text is always readable (mirrored back) */
+.link span {
+  display: block;
+  transition: transform 0.5s;
+  transform: rotateY(180deg);
+}
+
+.link:hover span {
+  transform: rotateY(0deg);
+  color: #ff0000;
+}
+
+/* ============ NAV LINKS ANIMATION ============== */
 
 
 /* ============= GRADIENTS =============*/
@@ -169,7 +183,7 @@ body {
     }
 
     .nav-link::after {
-        @apply content-[''] bg-[#a855f7] h-[5px] w-[0%] left-0 -bottom-1 rounded-xl absolute duration-500
+        @apply content-[''] bg-neutral-500 opacity-85 h-[5px] w-[0%] left-0 -bottom-1 rounded-xl absolute duration-500
     }
 
     .nav-link:hover::after {

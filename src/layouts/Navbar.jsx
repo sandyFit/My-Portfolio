@@ -39,16 +39,6 @@ const Navbar = () => {
             </div>
 
             <div className="flex justify-evenly gap-20">
-                {/*
-                    <p className='text-2xl font-semibold text-neutral-500 text-opacity-85 uppercase'>
-                        Available for work
-                    </p>
-
-                    <FaAsterisk
-                        className='rotating-icon'
-                        style={{color: '#9935d8'}}
-                    /> 
-                </div>  */}
  
                 <div className="flex justify-evenly gap-20">
                     <button class="relative h-14 overflow-hidden rounded bg-transparent px-8 py-6 text-neutral-600 
@@ -76,7 +66,7 @@ const Navbar = () => {
 
                 <ul className='flex flex-col items-start'>
                     {['about', 'projects', 'contact', 'resume'].map((item, index) => (
-                        <li className='text-neutral-600 text-2xl font-semibold hover:text-neutral-500 mb-2 nav-link'
+                        <li className='text-neutral-600 text-2xl font-semibold hover:text-skyIce mb-2 link'
                             key={index}
                         >
                             <Link to={item} smooth='true' duration={500}>

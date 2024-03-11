@@ -195,7 +195,7 @@ body {
 }
 
   .nav-link-footer::after {
-      @apply content-[''] bg-[#747276] h-[8px] w-[0%] rounded-xl absolute left-1/2 bottom-4 duration-500;
+      @apply content-[''] bg-neutral-500 bg-opacity-60 h-[8px] w-[0%] rounded-xl absolute left-1/2 bottom-4 duration-500;
       transform: translateX(-50%);
   }
 

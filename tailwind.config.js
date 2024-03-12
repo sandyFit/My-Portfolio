@@ -8,7 +8,23 @@ export default {
     extend: {
       colors: {
         textLight: '#36332d',
-        skyIce: '#7c5dec'
+        skyIce: {
+          100: '#b8b9fc',
+          200: '#8d8ffc',
+          300: '#7c5dec',
+          400: '#6148bd',
+          500: '#5540a3',
+          600: '#4c3896',
+          700: '#38296e',
+          800: '#291e52',
+          900: '#1f1c40',
+        },
+        salmon: '#ff637f',
+        orangey: {
+          300: '#fc686a',
+          400: '#fb4b4e',
+        },
+
       },
 
       fontFamily: {
@@ -35,6 +51,7 @@ export default {
         arya: ["Arya", 'sans-serif'],
         chivo: ["Chivo Mono", 'monospace'],
         magra: ["Magra", 'sans-serif'],
+
       },
 
       backgroundImage: {

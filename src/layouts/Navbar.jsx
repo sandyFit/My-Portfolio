@@ -1,10 +1,12 @@
-import { FaAsterisk, FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from "../components/ui/Logo";
+import { DarkMode, LightMode } from "@mui/icons-material";
+
+
 
 const Navbar = () => {
-
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
@@ -12,71 +14,30 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='absolute top-0 left-0 flex justify-between items-center w-full py-16 px-[4%] z-10'>
-            {/* <div className="flex relative">
-                <div className="big-circle-gradient w-32 h-32 rounded-full filter blur-[1px]"></div>
-                <div className="circle-gradient w-[6rem] h-[6rem] rounded-full absolute top-12 circle-shadow filter 
-                    blur-[1px]">
-                </div>
-
-            </div> */}
-            <div className=" relative">
-                
-                {/* <FaAsterisk style={{
-                    fontSize: '8rem'
-                }} className="rotating-icon  absolute -top-12 left-6 text-[#7c5dec]" />
-                
-                <FaAsterisk style={{
-                    fontSize: '5rem'}} className="rotating-icon text-lime-300" /> */}
-                
-
-                <Logo text='*TRISH RAMOS*DEVELOPER & DESIGNER'>
-                    <div className="flex justify-center items-center bg-lime-300 w-32 h-32 rounded-full -z-10">
-                        
-                        <p className="text-skyIce text-[7.5rem] font-syne font-bold">T</p>
-                    </div>
-                </Logo>
-            </div>
-
-            <div className="flex justify-evenly gap-20">
- 
-                <div className="flex justify-evenly gap-20">
-                    <button class="relative h-14 overflow-hidden rounded bg-transparent px-8 py-6 text-neutral-600 
-                        text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
-                        flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
-                        hover:text-neutral-500"
-                    >
-                        <span class="relative tracking-wider">get in touch</span>
-                    </button>
-
-                    <button class="relative w-14 h-14 overflow-hidden rounded bg-transparent p-2 text-neutral-600 
-                        text-2xl font-semibold text-opacity-85 uppercase transition-all duration-300 border-2 border-neutral-500  
-                        flex justify-center items-center hover:ring-2 hover:ring-neutral-500 hover:ring-offset-2
-                        hover:text-neutral-500"
-                        onClick={handleClick}
-                    >
-                        <span class="relative tracking-wider">
-                            {isClicked ? <FaMoon style={{ fontSize: '2rem' }} /> : <FaSun style={{ fontSize: '2rem' }} />}
-                            
-                            
-                        </span>
-                    </button>
-
-                </div>
-
-                <ul className='flex flex-col items-start'>
+        <nav className='absolute top-0 left-[140px] flex items-end w-[calc(100vw - 140px)] h-[142px]
+            border-[1px] border-t-skyIce-700 border-b-skyIce-700 z-10 px-10'>
+      
+            {/* Container for links and button */}
+            <div className="ml-[58rem] flex items-center gap-48"> {/* Adjust the gap as needed */}
+                {/* Navigation Links */}
+                <ul className='flex items-center gap-16'> {/* Adjust the gap as needed */}
                     {['about', 'projects', 'contact', 'resume'].map((item, index) => (
-                        <li className='text-neutral-600 text-2xl font-semibold hover:text-skyIce mb-2 link'
+                        <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 link uppercase'
                             key={index}
                         >
-                            <Link to={item} smooth='true' duration={500}>
+                            <Link to={item} smooth={true} duration={500}>
                                 {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
                             </Link>
                         </li>
                     ))}
-                    
                 </ul>
                 
+                {/* Theme Toggle Button */}
+                <button className="w-14 h-14" onClick={handleClick}>
+                    <span className="flex items-center justify-center w-full h-full text-skyIce-500 opacity-85 hover:text-skyIce-300">
+                        {isClicked ? <DarkMode style={{ fontSize: '2.7rem' }} /> : <LightMode style={{ fontSize: '2.7rem' }} />}
+                    </span>
+                </button>
             </div>
         </nav>
     )

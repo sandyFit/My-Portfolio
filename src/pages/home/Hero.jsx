@@ -1,69 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MotionText from '../../components/ui/MotionText';
 import { FaAsterisk } from "react-icons/fa";
+import SplitType from 'split-type';
 
 
 const Hero = () => {
 
-    const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <section className='relative w-full min-h-full flex flex-col pt-60 pb-20'>
-            <div className="absolute inset-0">
-                <div className="container mx-auto px-4 h-full">
-                    {/* Grid */}
-                    <div className="grid grid-cols-12 h-full">
-                        {Array.from({ length: 12 }).map((_, idx) => (
-                            <div key={idx} className="col-span-1 border-2 border-neutral-400 border-opacity-15 z-1 h-full">                               
-                            </div>
-                        ))}
-                    </div>
+        <section className='relative w-[calc(100vw - 140px)] min-h-full flex flex-col pt-60 pb-20 rounded-xl'>
+            <div className="absolute top-0 left-[50rem]">
+                <div className="w-[72rem] h-[72rem] bg-transparent rounded-full border-[1px] border-skyIce-700
+                    border-opacity-85 -z-10">                   
                 </div>
+
+                
+            </div>
+
+            <div className="absolute top-0 left-[140px] w-[47.5%] h-[58rem] bg-transparent border-r-[1px] border-b-[1px] 
+            border-skyIce-700 border-opacity-85">                   
             </div>
             {/* Content */}
-            <div className="container mx-auto px-4 z-10 text-left">
-                {/* <div className="absolute top-20 right-[36rem] w-[45rem] h-[45rem] rounded-full filter blur-xl 
-                    opacity-75 bg-gradient-to-r from-lime-200 to-purple-400 -z-20">
-                </div> */}
-
-                <p className='absolute font-semibold text-[52rem] -bottom-16 right-[42rem] -z-20
-                    text-neutral-400 opacity-30'
-                >
-                    &
-                </p>
-
-                <div className="flex flex-col items-center mt-12">
-
-                    <div className="flex flex-col items-start mb-[-4rem] w-full">
-                        <p className='text-[3.2rem] tracking-[.6rem] leading-tighter font-medium font-syne 
-                            text-neutral-600 ml-28'>
-                            Web Developer
-                        </p>                                      
-                    </div>
-                        <h1 className='font-syne  text-neutral-700 uppercase z-10 text-[12rem]
-                            tracking-[-.8rem]'
-                            data-aos='zoom-right'
-                            data-aos-offset="300"
-                            data-aos-easing="ease-in-sine"
-                        >
-                            trish ramos
-                        </h1>
-                    
-
-                    
-                    <div className="flex flex-col items-end mt-[-4rem] w-full">
-                        <p className='text-[3.2rem] tracking-[.6rem] leading-tight font-medium font-syne mr-24
-                            text-neutral-600'>
-                            Digital Designer
-                        </p>                                      
-                    </div>              
+            <div className="w-full h-full ml-[125px] px-4 z-10 text-left">
+                
+                <div className="flex flex-col justify-center items-start mt-12 ml-32">
+                    <h1 className='font-syne text-skyIce-400 uppercase z-10 text-[7rem] font-[750] tracking-[-.6rem]'
+                    >
+                        hi there, i'm<br />
+                        
+                        <span className='ml-24 mt-[-3rem] text-salmon'>trish ramos</span>
+                        
+                        
+                    </h1>                  
+                                
                 </div>
                 
 
-                <div className="mt-56">
+                <div className="mt-24 mb-12 bg-slate-300 h-20 flex items-center shadow-lg shadow-skyIce-700">
                     <MotionText
-                        icon={<FaAsterisk style={{color: '#7c5dec'}}/>}
-                        text={'Transforming Ideas into Interactive Experiences'}
+                        icon={<FaAsterisk style={{color: '#6148bd'}}/>}
+                        textBlue={'creative developer especializing in'}
+                        textOrange={`[Frontend]`}
+                        text3={'solutions'}
                     />
                 </div>
             </div>

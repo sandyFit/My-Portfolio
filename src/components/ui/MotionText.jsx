@@ -2,19 +2,22 @@
 import React from 'react';
 
 
-const MotionText = ({ icon, text}) => {
+const MotionText = ({ icon, textBlue, textOrange, text3}) => {
   const repetitions = Array(4).fill(null);
 
   return (
-    <div className="text-slider-container font-syne text-2xl z-10" style={{ overflow: 'hidden' }}>
-      <h2 className='text-center text-neutral-600 motion-text font-regular tracking-wider'>
+    <div className="text-slider-container font-syne text-4xl uppercase flex items-center py-2 z-10"
+        style={{ overflow: 'hidden' }}>
+      <h2 className='text-center  motion-text font-regular tracking-wider'>
         <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
           {repetitions.map((_, index) => (
             <React.Fragment key={index}>
               <span className='rotating-icon' style={{ margin: '0 2rem' }}>
                 {icon}
               </span>
-              <span className='text-neutral-600' style={{ margin: '0 1rem' }}>{text}</span>
+              <span className='text-skyIce-700' style={{ margin: '0 .6rem' }}>{textBlue}</span>
+              <span className='text-salmon font-semibold' >{textOrange}</span>
+              <span className='text-skyIce-700' style={{ margin: '0 .6rem' }}>{text3}</span>
               
               
             </React.Fragment>

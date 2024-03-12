@@ -1,32 +1,33 @@
 import React from 'react';
+import AboutMotion from '../../components/ui/AboutMotion';
 
 const About = () => {
     
 
     return ( 
         
-        <section className='w-full px-48 py-24 rounded-[30em 0 0 30em] bg-neutral-900 min-h-full z-10 relative'
-            style={{borderRadius: '120px 120px 0 0'}}
-        >
+        <section className='w-full px-48 py-24 bg-skyIce min-h-full z-10'>
             <div className="grid grid-cols-2 gap-20">
 
-                <div className="absolute top-20 right-[36rem] w-[45rem] h-[45rem] rounded-full filter blur-2xl 
-                    opacity-75 bg-gradient-to-r from-purple-500 to-lime-300 z-20">
-                </div>
                 {/* Who I Am */}
-                <article className='z-30'>
+                <article
+                    className='z-30'>
                     <h1 className="text-lime-300 text-[6rem] leading-none">Who I Am</h1>
-                    <p className="text-3xl text-neutral-200 mt-8">
-                        I'm a aesthetics focused motion designer and web developer based in Colombia, dedicated to crafting
-                        digital experiences that are not only purposeful but also unforgettable. With a keen eye for design
-                        and a commitment to innovative solutions, I aim to elevate brands and bring visions to life.
+                    <p className="text-4xl text-neutral-200 mt-8">
+                        I'm a aesthetics focused graphic designer based in Colombia. Driven by my passion for everything digital,
+                        I embarked on a self-taught journey to expand my expertise into web development. <br /><br />
+                        I love crafting digital experiences that are accessible, meaningful and unforgettable. <br /><br />
+                        With a keen eye for design and a commitment to innovative solutions, my goal is to make websites that
+                        transform the way people connect and interact with brands.
                     </p>
                 </article>
 
                 {/* Placeholder for an image or another visual representation */}
                 <article className="flex justify-center items-center z-30">
-                    <div className="bg-white w-full h-[60%] flex justify-center items-center">
-                        <p className="text-black">Your Image Here</p>
+                    <div className="flex justify-center items-center">
+                        <AboutMotion
+                            text={'TELLING STORIES WITH DESIGN & MAKING COOL THINGS WITH CODE*'}
+                        />
                     </div>
                 </article>
 

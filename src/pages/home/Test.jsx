@@ -86,4 +86,33 @@ const Test = () => {
     );
 }
 
-export default Test
+export default Test;
+
+
+{/* <div className="flex relative">
+    <div className="big-circle-gradient w-32 h-32 rounded-full filter blur-[1px]"></div>
+    <div className="circle-gradient w-[6rem] h-[6rem] rounded-full absolute top-12 circle-shadow filter 
+        blur-[1px]">
+    </div>
+
+</div> */}
+
+{/* <div className="absolute top-20 right-[36rem] w-[45rem] h-[45rem] rounded-full filter blur-xl 
+    opacity-75 bg-gradient-to-r from-lime-200 to-purple-400 -z-20">
+</div> */}
+
+{/* <FaAsterisk style={{
+        fontSize: '8rem'
+    }} className="rotating-icon  absolute -top-12 left-6 text-[#7c5dec]" />
+    
+    <FaAsterisk style={{
+        fontSize: '5rem'}} className="rotating-icon text-lime-300" /> */}
+
+{/* Grid */}
+{/* <div className="grid grid-cols-12 h-full">
+    {Array.from({ length: 16 }).map((_, idx) => (
+        <div key={idx} className="col-span-1 border-2 border-orangey  border-opacity-15 
+            z-1 h-full">                               
+        </div>
+    ))}
+</div> */}

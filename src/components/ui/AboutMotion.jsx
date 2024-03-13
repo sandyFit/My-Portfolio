@@ -5,7 +5,7 @@ const AboutMotion = ({ text, children }) => {
     const deg = 360 / length;
 
     return (
-        <div className='relative w-[580px] h-[580px] rounded-full grid place-items-center text-4xl font-medium 
+        <div className='relative w-[500px] h-[500px] rounded-full grid place-items-center text-4xl font-medium 
             z-50 bg-transparent'>
             {/* Background Circle */}
             <div className='absolute w-full h-full border-[50px] border-skyIce-200 rounded-full opacity-[yourDesiredOpacity]'></div>
@@ -19,7 +19,7 @@ const AboutMotion = ({ text, children }) => {
                             position: 'absolute',
                             top: '0',
                             left: '50%',
-                            transformOrigin: '0 290px'
+                            transformOrigin: '0 250px'
                         }}
                         >
                         {letter}

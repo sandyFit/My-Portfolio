@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const MotionText = ({ icon, textBlue, textOrange, text3}) => {
-  const repetitions = Array(4).fill(null);
+  const repetitions = Array(6).fill(null);
 
   return (
     <div className="w-[100vw] font-syne text-4xl uppercase flex items-center m-0 p-0 box-border z-10"

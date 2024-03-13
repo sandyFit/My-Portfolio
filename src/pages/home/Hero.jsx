@@ -19,7 +19,7 @@ const Hero = () => {
             {/* Content */}
             <div className="w-full h-full z-10 text-left">
                 
-                <div className="flex flex-col justify-center items-start mt-4 ml-56">
+                <h1 className="flex flex-col justify-center items-start mt-4 ml-56">
                     <div className='font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.2rem]'>
                         hi there, i'm
                     </div>
@@ -27,7 +27,7 @@ const Hero = () => {
                         font-[750] tracking-[-.2rem]'>
                         trish ramos
                     </div>                  
-                </div>
+                </h1>
 
                 
 

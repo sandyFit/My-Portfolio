@@ -11,20 +11,31 @@ const About = () => {
             <div className="grid grid-cols-1 gap-20 ml-56">
 
                 {/* Who I Am */}
-                <article className='z-30'>
+                <article className='z-30 w-8/12 ml-96 px-12'>
                     <h2 className='font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.2rem]'>
                         Who I am
                     </h2>
-                    <p className="font-syne text-4xl text-skyIce-900 mt-8 z-20">
-                        I'm a aesthetics focused graphic designer based in Colombia. Driven by my passion for everything digital,
-                        I embarked on a self-taught journey to expand my expertise into web development. <br /><br />
-                        I love crafting digital experiences that are accessible, meaningful and unforgettable. <br /><br />
-                        With a keen eye for design and a commitment to innovative solutions, my goal is to make apps & websites that
-                        transform the way people connect and interact with brands.
+                    <p className="font-syne text-3xl text-skyIce-900 ml-16 mt-8 z-20">
+                        
+                        Thanks for visisting. 😊 Feel free to call me Trish, just like my friends do.
+                        I'm a aesthetics focused graphic designer based in Colombia.<br /><br />
+                        Driven by my passion for all things digital, I embarked on a self-taught journey to expand 
+                        my expertise into web development, directing my attention primarily towards frontend solutions.
+                        <br /><br />
+                        This journey has deepened my commitment to make eye-catching apps & websites that are
+                        accessible, meaningful and truly unforgettable.<br /><br />
+
+                        Away from the screen, I'm indulging in life's varied rhythms—be it striking a balance with gym
+                        sessions, mastering the craft of baking cookies, or channeling my quirky side through the world
+                        of doodles.<br/><br/>
+
+                        I'm currently looking for new opportunities to challenge myself within a creative agency or through
+                        freelance projects, aiming to both apply and enhance my programming and design skills.
+                        
                     </p>
                 </article>
 
-                <div className="absolute top-[60rem] right-[70rem] ">
+                <div className="absolute top-[70rem] right-[75rem] ">
                     <div className="w-[68rem] h-[68rem] bg-transparent rounded-full border-[160px] border-salmon
                         border-opacity-85 z-0">                   
                     </div>                
@@ -33,22 +44,34 @@ const About = () => {
                 
 
                 {/* What I Do */}
-                <article className="W-full grid grid-cols-1 mt-[10rem] mb-24 z-30">
+                <article className="W-full grid grid-cols-1 mt-[6rem] mb-24 z-30">
                     <h2 className='font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] flex justify-self-end
                         tracking-[-.2rem] mb-12 mr-36'>
                             What I do
                         </h2>
                     <div className="grid  grid-cols-2 gap-8">
-                        
-                       <p className="font-syne text-4xl text-skyIce-900 mt-8">
-                            I transform ideas into digital experiences. <br/><br/>Whether
-                            it's building responsive and accessible web applications or creating compelling visual narratives, 
-                            my goal is to deliver an impactful digital presence that drives success and tells a story.
-                            <br /><br />
-                            Let's work together!<br /><br />
-                            I'm looking for new opportunities to challenge myself within a creative agency or through freelance projects,
-                            aiming to both apply and enhance my programming and design abilities.
-                        </p>
+
+                        <div className="grid">
+
+                        <p className="font-syne text-3xl text-skyIce-900 mt-8">
+                                I build cool digital things through design & Code. <br /><br />
+                                My portfolio showcases a diverse range of projects, including:
+                            </p>
+                            <ul className="font-syne text-3xl text-skyIce-900 mt-8 decoration-slice pl-6">
+                                <li className='list-disc'>UX Design</li>
+                                <li className='list-disc'>Web Development</li>
+                                <li className='list-disc'>UI Animations</li>
+                                <li className='list-disc'>Icon Illustrations</li>
+                            </ul>
+
+                            <p className="font-syne text-3xl text-skyIce-900 mt-8">
+                                Being confortable with code empowers me to swiftly prototype
+                                and validate user experiences, ensuring that each project is not only beautiful
+                                but also functional.
+                                <br /><br />
+                                I can help you with:<br /><br />
+                            </p>   
+                        </div>
                         <div className="z-10">
                             <AboutMotion text={' ~ I BUILD COOL THINGS THROUGH DESIGN & CODE'}/>
                         </div>

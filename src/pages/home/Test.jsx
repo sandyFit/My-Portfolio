@@ -124,4 +124,7 @@ export default Test;
                 text={'*CRAFTING NARRATIVES THROUGH DESIGN & BUILDING COOL THINGS WITH CODE'}
             />
         </div>
-    </article>
+</article>
+    
+// Whether it's building responsive and accessible web applications or creating compelling visual narratives, 
+// my goal is to deliver an impactful digital presence that drives success and tells a story.

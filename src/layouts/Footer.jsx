@@ -1,4 +1,4 @@
-import { CopyrightRounded, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+import { CopyrightRounded, GitHub, Instagram, LinkedIn, SouthEast } from '@mui/icons-material';
 import React from 'react'
 import { FaHeart, FaRocketchat } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -16,21 +16,25 @@ const Footer = () => {
             {/* Content */}
 
             <div className="flex flex-col justify-start relative ml-56">              
-                <h1 className='font-syne text-skyIce-600 uppercase z-10 text-[9rem] font-[750] tracking-[-.6rem] mt-20'>
-                    fancy a chat?
+                <h1 className='font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.6rem] mt-20'>
+                    drop me a line
                 </h1>
 
-                <p className='font-syne text-skyIce-600 text-[3.5rem] w-10/12 font-[700] tracking-[-.1rem] mt-20'>
+
+                <SouthEast style={{color:'#ff637f', fontSize: '4rem'}}/>
+
+                <p className='font-syne text-skyIce-600 text-[2.5rem] w-10/12 font-[600] tracking-[.1rem] mt-12'>
                     Great things happen when you say hello!
                 </p>
             
                 <a href="mailto:sandy07r@gmail.com">
-                    <p className='font-syne text-salmon hover:text-skyIce-300 text-[4rem] tracking-[.2rem] underline'>
+                    <p className='font-syne text-salmon hover:text-skyIce-300 text-[2.5rem] font-[400] tracking-[.1rem] 
+                        underline'>
                         hello@trishramos.com
                     </p>
                 </a>
 
-                <div className="w-full h-full grid grid-cols-2 place-items-between mt-[13.2rem] mb-12">     
+                <div className="w-full h-full grid grid-cols-2 place-items-between mt-[15.2rem] mb-12">     
                     <div className='flex justify-self-start gap-56'>
                         <div className='flex justify-start text-skyIce-700 mt-20 gap-12'>
                             <Instagram 

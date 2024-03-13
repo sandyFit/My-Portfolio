@@ -6,9 +6,9 @@ const MotionText = ({ icon, textBlue, textOrange, text3}) => {
   const repetitions = Array(4).fill(null);
 
   return (
-    <div className="text-slider-container font-syne text-4xl uppercase flex items-center py-2 z-10"
+    <div className="w-[100vw] font-syne text-4xl uppercase flex items-center m-0 p-0 box-border z-10"
         style={{ overflow: 'hidden' }}>
-      <h2 className='text-center  motion-text font-regular tracking-wider'>
+      <h2 className='text-center motion-text font-regular tracking-wider'>
         <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
           {repetitions.map((_, index) => (
             <React.Fragment key={index}>
@@ -17,9 +17,7 @@ const MotionText = ({ icon, textBlue, textOrange, text3}) => {
               </span>
               <span className='text-skyIce-700' style={{ margin: '0 .6rem' }}>{textBlue}</span>
               <span className='text-salmon font-semibold' >{textOrange}</span>
-              <span className='text-skyIce-700' style={{ margin: '0 .6rem' }}>{text3}</span>
-              
-              
+              <span className='text-skyIce-700' style={{ margin: '0 .6rem' }}>{text3}</span>              
             </React.Fragment>
           ))}
         </div>

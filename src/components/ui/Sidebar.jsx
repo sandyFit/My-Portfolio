@@ -4,10 +4,10 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Sidebar = () => {
     return (
-        <section className='w-[140px] min-h-full flex flex-col justify-between items-center border-[1px]
-            border-skyIce-700 gap-60 pb-16 fixed inset-0
+        <section className='w-[146px] min-h-full flex flex-col justify-between items-center border-r-[2px]
+            border-zinc-100 gap-60 pb-16 fixed inset-0 z-30 bg-zinc-300 bg-opacity-85
         '>
-            <div className="w-full relative  border-b-[1px] border-skyIce-700">
+            <div className="w-full h-[146px] relative bg-skyIce-600 ">
                 <Logo text='*TRISH RAMOS*CREATIVE DEVELOPER'>
                     <div className="flex justify-center items-center bg-lime-300 w-24 h-24 rounded-full -z-10">                
                         <p className="text-skyIce-600 text-[5rem] font-syne font-bold">T</p>

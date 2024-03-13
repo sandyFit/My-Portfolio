@@ -46,7 +46,7 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  animation: spin 15s linear infinite;
+  animation: spin 25s linear infinite;
 }
 
 
@@ -159,8 +159,15 @@
 .motion-text {
     display: inline-block;
     white-space: nowrap;
+    margin: 0;
+    padding: 0;
     animation: slideLeft 20s linear infinite;
 }
+
+.motion-text h2, .motion-text div {
+    width: 100%; /* Ensures they take up all available space */
+}
+
 
 /*  Hover for gradient buttons*/
 .btn-filled:hover {

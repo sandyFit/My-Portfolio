@@ -10,10 +10,6 @@ const Home = () => {
                 <Hero/>
             </section>
 
-            <section id='quotes' className=''>
-                <Quotes/>
-            </section>
-
             <section id='about' className=''>
                 <About/>
             </section>

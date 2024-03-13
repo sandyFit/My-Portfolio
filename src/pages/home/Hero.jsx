@@ -9,12 +9,10 @@ const Hero = () => {
 
     return (
         <section className='relative w-[calc(100vw - 140px)] min-h-full flex flex-col pt-60 pb-20 rounded-xl'>
-            <div className="absolute top-[4rem] left-[62rem]">
-                <div className="w-[55rem] h-[55rem] bg-transparent rounded-full border-[140px] border-salmon
+            <div className="absolute top-[1rem] left-[52rem]">
+                <div className="w-[65rem] h-[65rem] bg-transparent rounded-full border-[160px] border-salmon
                     border-opacity-85 z-0">                   
-                </div>
-
-                
+                </div>                
             </div>
 
             
@@ -22,10 +20,11 @@ const Hero = () => {
             <div className="w-full h-full z-10 text-left">
                 
                 <div className="flex flex-col justify-center items-start mt-4 ml-56">
-                    <div className='font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.6rem]'>
+                    <div className='font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.2rem]'>
                         hi there, i'm
                     </div>
-                    <div className='ml-32 mt-[-2rem] font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] font-[750] tracking-[-.6rem]'>
+                    <div className='ml-36 mt-[-2rem] font-syne text-skyIce-600 uppercase z-10 text-[7.5rem] 
+                        font-[750] tracking-[-.2rem]'>
                         trish ramos
                     </div>                  
                 </div>

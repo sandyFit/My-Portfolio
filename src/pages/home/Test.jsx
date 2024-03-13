@@ -109,10 +109,19 @@ export default Test;
         fontSize: '5rem'}} className="rotating-icon text-lime-300" /> */}
 
 {/* Grid */}
-{/* <div className="grid grid-cols-12 h-full">
+<div className="grid grid-cols-12 h-full">
     {Array.from({ length: 16 }).map((_, idx) => (
         <div key={idx} className="col-span-1 border-2 border-orangey  border-opacity-15 
             z-1 h-full">                               
         </div>
     ))}
-</div> */}
+</div> 
+
+{/* Placeholder for an image or another visual representation */}
+    <article className="flex justify-center items-center z-30">
+        <div className="flex justify-center items-center">
+            <AboutMotion
+                text={'*CRAFTING NARRATIVES THROUGH DESIGN & BUILDING COOL THINGS WITH CODE'}
+            />
+        </div>
+    </article>

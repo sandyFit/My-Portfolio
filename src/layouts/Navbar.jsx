@@ -15,7 +15,7 @@ const Navbar = () => {
         <nav className='absolute top-0 left-[146px] flex items-end w-[calc(100vw - 146px)] h-[142px] z-10 px-10'>
             <div className="w-full h-full grid grid-cols-2 place-items-end mb-4">
                 {/* Navigation Links */}
-            <ul className='flex justify-self-end gap-20 mr-56 ml-12'> 
+                <ul className='flex justify-self-end gap-20 mr-56 ml-12'> 
                     {['about', 'projects', 'contact', 'resume'].map((item, index) => (
                         <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 link uppercase' key={index}>
                             <Link to={item} smooth={true} duration={500}>

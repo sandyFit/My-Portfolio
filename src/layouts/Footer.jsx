@@ -1,6 +1,6 @@
 import { CopyrightRounded, GitHub, Instagram, LinkedIn } from '@mui/icons-material';
 import React from 'react'
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRocketchat } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Logo from '../components/ui/Logo';
 import TextInMotion from '../components/ui/TextInMotion';
@@ -12,98 +12,63 @@ const Footer = () => {
     
 
     return (
-        <section className='w-full min-h-full flex flex-col pb-4 relative'>
-            <div className="absolute inset-0">
-                <div className="container mx-auto px-4 h-full">
-                    {/* Grid */}
-                    <div className="grid grid-cols-12 h-full">
-                        {Array.from({ length: 12 }).map((_, idx) => (
-                            <div key={idx} className="col-span-1 border-2 border-zinc-400 border-opacity-15 z-1 h-full">                               
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
+        <section className='w-full min-h-full flex flex-col relative overflow-hidden'>
             {/* Content */}
 
-            <div className="flex">
-                <TextInMotion
-                    icon={'|'}
-                    text={'AVAILABLE FOR WORK'}
-                />
-            </div>
-            
-                
-            <div className="container mx-auto px-4 z-10 text-center justify-center relative pt-20">
-
-                <div className="flex justify-center mt-12">
-                    <p className='font-syne text-neutral-500 text-[2.3rem] tracking-[.8rem]'>
-                        Great things happen when you say hello!
-                    </p>
-                </div>
-
-                <h1 className='text-[14rem] font-syne font-bold text-neutral-700 uppercase z-10 leading-[15rem] 
-                    tracking-[-1rem] cursor-pointer hover:text-neutral-600'>
-                    <a href="mailto:sandy07r@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
-                        Let's talk
-                    </a>
+            <div className="flex flex-col justify-start relative ml-56">              
+                <h1 className='font-syne text-skyIce-600 uppercase z-10 text-[9rem] font-[750] tracking-[-.6rem] mt-20'>
+                    fancy a chat?
                 </h1>
 
-                
-
-                <p className='font-syne text-neutral-500 text-[2.3rem] tracking-[.2rem] mt-1 mb-[8rem]'>
-                    hello@trishramos.com
+                <p className='font-syne text-skyIce-600 text-[3.5rem] w-10/12 font-[700] tracking-[-.1rem] mt-20'>
+                    Great things happen when you say hello!
                 </p>
+            
+                <a href="mailto:sandy07r@gmail.com">
+                    <p className='font-syne text-salmon hover:text-skyIce-300 text-[4rem] tracking-[.2rem] underline'>
+                        hello@trishramos.com
+                    </p>
+                </a>
 
-                <div className="flex-flex-start relative">
-                    <hr className='w-[83.5%] border-2 border-skyIce border-opacity-60 absolute top-16 opacity-60'/>
-                </div>
-
-                
-
-                <div className="flex justify-between items-center">     
-                    <div className="flex justify-betwwen items-center gap-[23.5rem] w-full ">
-                        <div className='flex justify-end text-neutral-600 mr-16 mt-20 gap-16'>
+                <div className="w-full h-full grid grid-cols-2 place-items-between mt-[13.2rem] mb-12">     
+                    <div className='flex justify-self-start gap-56'>
+                        <div className='flex justify-start text-skyIce-700 mt-20 gap-12'>
                             <Instagram 
-                                style={{ fontSize: '3rem',  cursor: 'pointer', transition: 'opacity 0.3s' }}
+                                style={{ fontSize: '2rem',  cursor: 'pointer', transition: 'opacity 0.2s' }}
                                 onMouseOver={(e) => e.target.style.opacity = 0.65}
                                 onMouseOut={(e) => e.target.style.opacity = 2} 
                             />
                             <LinkedIn 
-                                style={{ fontSize: '3rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                                style={{ fontSize: '2rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
                                 onMouseOver={(e) => e.target.style.opacity = 0.65}
                                 onMouseOut={(e) => e.target.style.opacity = 1}
                             />
                             <GitHub 
-                                style={{ fontSize: '3rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                                style={{ fontSize: '2rem', cursor: 'pointer', transition: 'opacity 0.3s' }}
                                 onMouseOver={(e) => e.target.style.opacity = 0.65}
                                 onMouseOut={(e) => e.target.style.opacity = 1}
                             /> 
                         </div>
 
 
-                        <div className="flex text-2xl text-neutral-600 mt-20">
+                        <div className="w-full flex text-xl font-medium uppercase text-skyIce-700 mt-20">
                             <CopyrightRounded style={{marginTop: '.1rem', fontSize: '1.8rem'}}/>
-                            {`${date.getFullYear()}  Trish Ramos   |   Crafted with`}
-                            <FaHeart style={{color: 'red', margin: '8px', opacity: '.7'}}/>
+                            {`${date.getFullYear()}  |   Crafted with`}
+                            <FaHeart style={{color: 'red', margin: '3px 4px 0 4px', opacity: '.7'}}/>
                             {'by yours truly'}
                         </div>
-                    </div>    
-
-                    <div className="flex flex-col pb-6">
-                        <Logo text='*TRISH RAMOS*DEVELOPER & DESIGNER'>
-                            <div className="flex justify-center items-center bg-lime-300 w-32 h-32 rounded-full -z-10">
-                                
-                                <p className="text-skyIce text-[7.5rem] font-syne font-bold">T</p>
-                            </div>
-                        </Logo>
-                    </div> 
+                    </div>  
                     
+                    <div className="absolute top-[20rem] left-[70rem] ">
+                        <div className="w-[68rem] h-[68rem] bg-transparent rounded-full border-[160px] border-salmon
+                            border-opacity-85 z-0">                   
+                        </div>                
+                    </div>    
 
                 </div>           
             </div>
              
+            
         </section>
     )
 }

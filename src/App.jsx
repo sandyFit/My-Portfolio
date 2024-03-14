@@ -1,14 +1,12 @@
 import React from 'react'
-import Navbar from './layouts/Navbar';
-import { Outlet } from 'react-router-dom';
-import Footer from './layouts/Footer';
-import 'aos/dist/aos.css'; // Import the CSS styles
-import Sidebar from './components/ui/Sidebar';
+import Navbar from './layouts/Navbar'
+import { Outlet } from 'react-router-dom'
+import Footer from './layouts/Footer'
+import Sidebar from './layouts/Sidebar'
 
 const App = () => {
-
     return (
-        <section className='relative'>
+        <section>
             <Navbar />
             <Sidebar/>
             <Outlet />
@@ -17,4 +15,4 @@ const App = () => {
     )
 }
 
-export default App;
+export default App

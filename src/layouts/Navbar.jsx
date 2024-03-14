@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { DarkMode, LightMode } from "@mui/icons-material";
+import { Link as ScrollLink } from 'react-scroll';
+import { DarkMode } from "@mui/icons-material";
 import { FaSun } from 'react-icons/fa';
 
 
@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
-        setIsClicked(!isClicked);
+        setIsClicked(!isClicked); 
     };
 
     return (
@@ -17,12 +17,39 @@ const Navbar = () => {
                 {/* Navigation Links */}
                 <ul className='flex justify-self-end gap-20 mr-56 ml-12'> 
                     {['about', 'projects', 'contact', 'resume'].map((item, index) => (
-                        <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 link uppercase' key={index}>
-                            <Link to={item} smooth={true} duration={500}>
+                        <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 link cursor-pointer
+                             uppercase' key={index}>
+                            <ScrollLink to={item} smooth={true} duration={500}>
                                 {item.charAt(0).toUpperCase() + item.slice(1).replace('-', ' ')}
-                            </Link>
+                            </ScrollLink>
                         </li>
                     ))}
+
+                    {/* <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300  cursor-pointer
+                             uppercase' >
+                        <ScrollLink to='about' smooth={true} duration={500} spy={true}>
+                            About 
+                        </ScrollLink>
+                    </li>
+                    <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 cursor-pointer
+                             uppercase'>
+                        <ScrollLink to='projects' smooth={true} duration={500} spy={true}>
+                            Projects 
+                        </ScrollLink>
+                    </li>
+                    <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 cursor-pointer
+                             uppercase'>
+                        <ScrollLink to='contact' smooth={true} duration={500} spy={true}>
+                            Contact 
+                        </ScrollLink>
+                    </li>
+                    <li className='text-skyIce-500 text-xl font-semibold hover:text-skyIce-300 cursor-pointer
+                             uppercase'>
+                        <ScrollLink to='cv' smooth={true} duration={500} spy={true}>
+                            CV 
+                        </ScrollLink>
+                    </li> */}
+
                 </ul>
                 
                 {/* Theme Toggle Button */}

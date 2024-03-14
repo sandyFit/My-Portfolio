@@ -7,8 +7,12 @@ const About = () => {
 
     return ( 
         
-        <section className='w-full pl-16 pt-72 bg-zinc-300 min-h-full z-10'>
-            <div className="grid grid-cols-1 gap-20 ml-56">
+        <section name='about' className='w-full pl-16 pt-72 bg-zinc-300 min-h-full z-10 overflow-hidden'>
+            <div className="before::content[''] absolute top-[1rem] left-[43%] w-[65rem] h-[65rem] bg-transparent 
+                rounded-full border-[160px] border-salmon-300 z-0">
+            </div>
+            
+            <div id='about' className="grid grid-cols-1 gap-20 ml-56 ">
 
                 {/* Who I Am */}
                 <article className='z-30 w-8/12 ml-96 px-12'>
@@ -22,8 +26,8 @@ const About = () => {
                         Driven by my passion for all things digital, I embarked on a self-taught journey to expand 
                         my expertise into web development, directing my attention primarily towards frontend solutions.
                         <br /><br />
-                        This journey has deepened my commitment to make eye-catching apps & websites that are
-                        accessible, meaningful and truly unforgettable.<br /><br />
+                        This journey has deepened my commitment to build digital products that are the perfect blend of
+                        meaningful aesthetics and function.<br /><br />
 
                         Away from the screen, I'm indulging in life's varied rhythms—be it striking a balance with gym
                         sessions, mastering the craft of baking cookies, or channeling my quirky side through the world
@@ -35,12 +39,9 @@ const About = () => {
                     </p>
                 </article>
 
-                <div className="absolute top-[70rem] right-[75rem] ">
-                    <div className="w-[68rem] h-[68rem] bg-transparent rounded-full border-[160px] border-salmon
-                        border-opacity-85 z-0">                   
-                    </div>                
-                </div>  
-
+                <div className="before::content[''] absolute top-[71rem] right-[62%] w-[65rem] h-[65rem] bg-transparent 
+                    rounded-full border-[160px] border-salmon-300 z-0">
+                </div>
                 
 
                 {/* What I Do */}
@@ -73,7 +74,7 @@ const About = () => {
                             </p>   
                         </div>
                         <div className="z-10">
-                            <AboutMotion text={' ~ I BUILD COOL THINGS THROUGH DESIGN & CODE'}/>
+                            <AboutMotion text={' ~ I BUILD COOL DIGITAL THINGS THROUGH DESIGN & CODE'}/>
                         </div>
                     </div>
 

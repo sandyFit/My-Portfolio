@@ -4,42 +4,10 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
 
 
-/* ============ CRONOGRAMA DE ANIMACIÓN =============*/
-
-/* body {
-  background-image: 
-      linear-gradient(300deg, rgba(217, 216, 214, 0.8), transparent),
-      linear-gradient(100deg, rgba(166, 155, 145, 0.6), transparent),
-      linear-gradient(200deg, rgba(205, 201, 194, 0.8), transparent);
-    background-size: cover;
-    background-position: center;
-} */
-
-.app-title {
-        background: linear-gradient(135deg, rgb(255, 99, 127) 0%, rgb(124, 93, 236) 100%);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-
-/* ========================================= */
-.tags-shadow {
-  box-shadow:  19px 19px 46px #26b7b5,
-             -19px -19px 46px #3affff;
-}
-
-
-.border-text-stroke {
-  color: transparent; /* Makes the text color transparent */
-  -webkit-text-stroke: 3px #bef264; /* 1px wide black border */
-  
-}
-
-
-
-/* ======== Spinning Curved Text ========== */
+/* ============== LOGO SPINNING TEXT ============= */
 
 .spinning-text {
   position: absolute;
@@ -60,78 +28,7 @@
 }
 
 
-/* Base link style */
-/* Base link style */
-.link {
-  display: inline-block;
-  transition: transform 0.5s, color 0.5s;
-  transform-origin: center;
-  transform-style: preserve-3d;
-}
-
-/* Hover state */
-.link:hover {
-  transform: rotateY(360deg); /* Rotate around the Y-axis */
-}
-
-/* Ensure the text is always readable (mirrored back) */
-.link span {
-  display: block;
-  transition: transform 0.5s;
-  transform: rotateY(180deg);
-}
-
-.link:hover span {
-  transform: rotateY(0deg);
-  color: #ff0000;
-}
-
-/* ============ NAV LINKS ANIMATION ============== */
-
-
-/* ============= GRADIENTS =============*/
-
-.tag-gradient-cyan {
-    background: radial-gradient(ellipse, rgb(154, 240, 253) 0%, rgb(7, 202, 232) 100%);
-}
-
-.tag-gradient-pink {
-    background: radial-gradient(ellipse, rgb(249, 152, 200) 0%, rgb(236, 72, 153) 100%);
-}
-
-.tag-gradient-purple {
-    background: radial-gradient(ellipse, rgb(228, 135, 252) 0%, rgb(174, 60, 245) 100%);
-}
-
-
-
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(-50px);
-    transform-origin: 50px 50%;
-  }
-  50% {
-    transform: rotate(360deg) translateX(-50px);
-    transform-origin: 50px 50%;
-  }
-}
-
-.circle-gradient {
-    background: radial-gradient(circle, rgba(245,216,252,1) 0%, rgba(148,187,233,1) 100%);
-    /* animation: orbit 5s linear forwards; */
-}
-
-.big-circle-gradient {
-    background: radial-gradient(circle, rgb(243, 219, 249) 0%, rgba(201,148,233,1) 100%);
-}
-
-.circle-shadow {
-    -webkit-box-shadow: 10px -9px 25px -11px rgba(89,30,107,1);
-    -moz-box-shadow: 10px -9px 25px -11px rgba(89,30,107,1);
-    box-shadow: 10px -9px 25px -11px rgba(89,30,107,1);
-}
-
-/*================ABOUT TITLE ANIMATION================*/
+/*================MOTION TEXT================*/
 
 @keyframes slideLeft {
     from {
@@ -165,15 +62,32 @@
 }
 
 
-/*  Hover for gradient buttons*/
-.btn-filled:hover {
-  background-color: #0084FF !important; /* Azure color */
-  background-image: none !important;
+/* ============= DECORATIVE CIRCLES ============= */
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65rem; /* Adjust as needed */
+  height: 65rem; /* Adjust as needed */
+  background: transparent;
+  border-radius: 50%;
+  border: 160px solid salmon;
+  z-index: 0;
 }
+
+/* Ensure the .hero element or any other parent doesn't cause overflow */
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+
 
 @layer base {
     html, body {
-        @apply w-full h-full box-border overflow-x-hidden m-0 p-0 bg-neutral-300;
+        @apply w-full h-full box-border  m-0 p-0 bg-neutral-300;
     }
 
     h1 {
@@ -182,35 +96,6 @@
 }
 
 @layer utilities {
-
-  .nav-link {
-        @apply relative tracking-[1px] 
-    }
-
-    .nav-link::after {
-        @apply content-[''] bg-neutral-500 opacity-85 h-[5px] w-[0%] left-0 -bottom-1 rounded-xl absolute duration-500
-    }
-
-    .nav-link:hover::after {
-        @apply w-[100%] 
-    }
-
-    .nav-link-footer {
-    @apply relative tracking-[1px];
-}
-
-  .nav-link-footer::after {
-      @apply content-[''] bg-neutral-500 bg-opacity-60 h-[8px] w-[0%] rounded-xl absolute left-1/2 bottom-4 duration-500;
-      transform: translateX(-50%);
-  }
-
-  .nav-link-footer:hover::after {
-      @apply w-[80%];
-  }
-
-  .rounded-top {
-    border-radius: 30em 0 0 30 2em;
-  }
 
 }
 

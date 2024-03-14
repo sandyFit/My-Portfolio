@@ -1,20 +1,18 @@
-import React from 'react';
-import Hero from './Hero';
-import About from './About';
-import Quotes from './Quotes';
+import React from 'react'
+import Hero from './Hero'
+import About from './About'
+
+import Project from './Project'
 
 const Home = () => {
     return (
-        <div className='relative'>           
-            <section id='hero' className=''>
-                <Hero/>
-            </section>
-
-            <section id='about' className=''>
-                <About/>
-            </section>
-        </div>
+        <section>
+            <Hero />
+            <About />
+            {/* <Project/> */}
+            
+        </section>
     )
 }
 
-export default Home;
+export default Home

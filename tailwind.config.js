@@ -19,7 +19,10 @@ export default {
           800: '#291e52',
           900: '#1f1c40',
         },
-        salmon: '#ff637f',
+        salmon: {
+          300: '#fc7991',
+          400: '#ff637f',
+      },
         orangey: {
           300: '#fc686a',
           400: '#fb4b4e',
@@ -62,4 +65,5 @@ export default {
   },
   plugins: [],
 }
+
 
